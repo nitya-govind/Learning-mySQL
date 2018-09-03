@@ -1,0 +1,53 @@
+**************************************************
+1. What? 
+**************************************************
+
+QUERY -----------------------> DATABASE -----------> OUTPUT
+      Piece of code 
+      sent to the DB
+      To retrieve or modify
+
+- DB designing/creation + administration + manipulation -> together form a DataBase Management System (DBMS)
+- Most popular DBMS: MySQL
+- SQL is the programming language that lets you create and manipulate Databases
+- SQL is a Declarative type of Programming language
+
+**************************************************
+2. Types of Databases:
+**************************************************
+      |
+______|
+|-> 1. RELATIONAL Databases/ MySQL (RDBMS)
+|Egs. 
+| Relations are made using intersecting tables.
+| Efficient, as we have to load fewer tables depending on the relations.
+| Raw data with data consistency, data integrity, speed and security
+|
+|-> 2. NON-RELATIONAL Databases/ NoSQL ()
+|Egs. 
+| Relations are not by intersecting tables, but use mathematical logic to relate.
+| Raw data with data consistency, data integrity, speed and security
+
+
+**************************************************
+3. Types of roles people play with databases:
+**************************************************
+1. Database designer
+- E-R (Entity-Relationship) diagrams
+- Relational schema -> Organization
+- use SQL to setup/creation this DB
+
+2. Database admin
+- Maintenance of DBs
+
+3. Database users
+- Manipulate data in a DB
+
+**************************************************
+4. Setting up MySQL:
+**************************************************
+1. Download MySQL Server for mac
+- Create a password for Root user
+2. Download MySQL Workbench (GUI for Mac)
+- Connect to the server as the Root user
+- You can load multiple connections at a time too. (Hit 'house' icon to go to main page)

@@ -1,0 +1,52 @@
+
+**************************************************
+1. String
+**************************************************
+
+1. CHAR [n]
+--------------------------
+- Fixed
+Eg. CHAR [6]
+We can input to this entry "Nikita" but not "Nitya"
+(50% faster than VARCHAR
+
+2. VARCHAR [n])
+--------------------------
+- Flexible till max n
+Eg. VARCHAR [6]
+We can input "Nikita" or "Nitya"
+Used for passwords with a max length and min variable
+
+3. ENUM ('x', 'y')
+--------------------------
+- Fixed set of options
+Eg. ENUM ('M', 'F')
+
+
+**************************************************
+2.Numeric
+**************************************************
+TINYINT
+SMALLINT
+MEDIUMINT
+INT
+BIGINT
+
+DECIMAL (Precision) OR DECIMAL(Precision, Scale)
+NUMERIC
+
+FLOAT
+DOUBLE
+
+
+**************************************************
+3. OTHER
+**************************************************
+
+DATE
+DATETIME
+TIMESTAMP
+BLOB
+
+NULL -> Empty or missing value
+0 or NONE -> Has a value but it is empty
