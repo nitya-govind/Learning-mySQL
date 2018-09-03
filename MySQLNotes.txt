@@ -1,0 +1,3 @@
+Database: organize huge data that can give results on request-> compact
+    Relational vs Non-relational 
+Relational
