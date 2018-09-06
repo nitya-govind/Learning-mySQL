@@ -1,0 +1,127 @@
+DML
+SQL----> Insensitive char so Nitya and nitya is the same
+
+SELECT * FROM table_name;
+SELECT column1, column2,..
+FROM table_name;
+WHERE condition1 eg(first_name = 'Nitya') 
+      condition1 AND condition2
+      condition1 OR condition2
+      condition1 AND (condition2 OR condition3)
+      condition1 IN ('Nitya', 'Nikita', 'Usha')
+      condition1 LIKE ('Ni%') //Returns all names starting with 'Ni'
+                      ('%it%')
+                      ('Nity_')
+      condition BETWEEN value AND value
+      column IS NOT NULL
+             IS NULL
+SELECT DISTINCT column1 FROM table;
+
+SELECT 
+    COUNT(column1)                   //no whitespace after bracket inside
+    COUNT(DISTINCT column1)         //number of different/distinct values
+FROM table
+
+SELECT *
+FROM 
+    table
+ORDER BY value DESC;
+               ASC;
+        value, value ASC;
+
+SELECT column1
+FROM table
+WHERE conditions
+GROUP BY column(s)
+ORDER BY column(s);
+
+COUNT(name) AS total_names
+
+
+
+
+
+
+
+SELECT picks the category
+* everything
+FROM determines the table
+WHERE sets a condition to what part of data to be retrieved
+OPERATORS: precedence AND > OR ()-> will consider condition simultaneously  
+= :equal operator
+AND :combine two statements in a condition code, satisfy condition1 AND condition2
+OR  :will return either of the condition, satisfy condition1 OR condition2
+IN , NOT IN :will return if it exists in the table, quicker, NOT IN inverse of IN
+LIKE, NOT LIKE :similar to so and so, NOT LIKE inverse of LIKE
+WILDCARD characters:
+    % matches 0 more chars befor or after it based on where it is placed
+    _ matches one char before or after based on where it is placed
+    * count all rows of table and 'everything' 
+BETWEEN... AND... 
+    both values are included in the list
+NOT BETWEEN... AND... 
+    returns value before first value and after second value
+EXISTS, NOT EXISTS
+IS NULL, IS NOT NULL : returns empty values IS NOT NULL return non-empty values
+Comparison Operators: 
+WHERE condition1 comparison operator 'value'
+=
+>
+>=
+<
+<=
+<> ,!= NOT EQUAL operators
+DISTINCT : avoid repetition of values
+Aggregate Functions: 
+-applied to Multiple Rows of a Single Column of a table to Return an output of a Single Value
+-ignored NULL until told not to    
+    COUNT() counts the number of non-null records in a field
+    SUM()  sums all the non-null values in a Column
+    MIN()  returns the min value fron the entire list
+    MAX()  returns the max value from the entire list
+    AVG()  calculates avg of all non-null values to a certain column of table
+ORDER BY:
+    Orders by ascending or descending
+    Works on Strings and numbers
+GROUP BY
+    groups into a specific field or fields
+    powerful, used after WHERE if any and before ORDER BY
+AS alias
+    
+
+Questions:
+LIKE operator module
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    hire_date  LIKE ('%2000%');
+    why double % when 2000% gives same output
+    used whenever with aggregate function
+HAVING
+    bw GROUP BY and ORDER by
+    like 
+
+    
+    
+LECTURE 9 SECTION 98
+
+-- SELECT 
+--     *
+-- FROM
+--     employees
+-- WHERE  gender = 'F' AND hire_date >= '2000';
+why no % after 2000 instead of '2000-01-01'
+
+-- SELECT 
+--     *
+-- FROM
+--     salaries
+-- WHERE  salary >150000;
+why is 150000 not in quotes
+
+LECTURE 9 108, 111
+
+
+
