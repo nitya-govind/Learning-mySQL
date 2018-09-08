@@ -1,6 +1,8 @@
 
 // Like any other programming language, table names cannot be Reserved Keywords like ADD, TRUNCATE, CREATE, etc.
 
+// MySQL is case insensitive
+
 **************************************************
 1. Data Definition Language (DDL)
 **************************************************
