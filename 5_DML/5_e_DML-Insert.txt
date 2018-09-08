@@ -1,0 +1,27 @@
+**************************************************
+Data Manipulation Language (DML) - SELECT
+**************************************************
+
+1.	mysql>	INSERT INTO tableName
+		(
+		  col1,
+                  col2..
+                )
+		VALUES
+		(
+		  val1,
+		  val2..
+		 );
+
+1.a.	mysql>	INSERT INTO ANotherTable
+		(
+		  col1,
+                  col2..
+                )
+		SELECT * FROM ExistingTable
+
+
+
+
+
+
