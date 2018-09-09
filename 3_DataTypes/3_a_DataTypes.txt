@@ -26,14 +26,17 @@ Eg. ENUM ('M', 'F')
 **************************************************
 2.Numeric
 **************************************************
+int data types
 TINYINT
 SMALLINT
 MEDIUMINT
 INT
 BIGINT
 
+fixed data types
 DECIMAL (Precision) OR DECIMAL(Precision, Scale)
 NUMERIC
+
 
 FLOAT
 DOUBLE

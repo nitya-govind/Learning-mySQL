@@ -11,7 +11,7 @@
 ------------------------------------------------
 1.a.	mysql>	CREATE TABLE Sales;
 1.b.	mysql>	CREATE TABLE Sales (ProductName CHAR[100]), (ProductCost INT);
-1.c.	mysql>	CREATE TABLE Sales (ProductName CHAR default 'NoProductName' UNIQUE), (ProductCost INT NOT NULL Default 10 CHECK (ProductCost > 9));
+1.c.	mysql>	CREATE TABLE Sales (ProductName CHAR default 'NoProductName'), (ProductCost INT NOT NULL Default 10 CHECK (ProductCost > 9));
 
 // Data Types (Explained in Chapter 2)
 1. Numeric (INT, FLOAT, DOUBLE, etc)
@@ -73,10 +73,10 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 3. Modify data in existing Columns
 ------------------------------------------------
 3.a.	mysql>	UPDATE sales 
-		SET = F 
+		SET gender = 'F' 
 		WHERE customerRepOfPurchase = 5;
 
-	mysql>	INSERT INTO sales VALUES (5,M)
+3.b.	mysql>	INSERT INTO sales VALUES (5,M)
 
 4. Destroy data in an existing column
 ------------------------------------------------
@@ -118,7 +118,7 @@ To an intern level
 1. Commit changes made (like a git commit)
 ------------------------------------------------
 1.a.	mysql>	UPDATE sales 
-		SET = F 
+		SET gender = 'F' 
 		WHERE customerRepOfPurchase = 10;
 		COMMIT;
 
@@ -127,7 +127,7 @@ Then anyone who queries after this will get the updated entry.
 2. Made a mistake, need to revert an update
 ------------------------------------------------
 2.a.	mysql>	UPDATE sales 
-		SET = F 
+		SET gender = 'F' 
 		WHERE customerRepOfPurchase = 10;
 		COMMIT;
 		ROLLBACK; // Reverts only the last commit

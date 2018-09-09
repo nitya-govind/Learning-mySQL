@@ -21,8 +21,8 @@ Columns of Tables: dateOfPurchase, customerID, etc.
 
 1. Primary Key /Unique Key/ Cannot be Null key:
 - What makes a row/record in the table unique?
-Eg.	Column_1
-	Column_1 + Column_4
+Eg.	Column_1 (Just one column)
+	Column_1 + Column_4 (Combination of two columns)
 
 
 -> Organize the tables I.e. draw relational schema
