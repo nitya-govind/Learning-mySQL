@@ -1,0 +1,130 @@
+
+**************************************************
+1. Recap: Types of roles people play with databases:
+**************************************************
+1. Database designer
+- E-R (Entity-Relationship) diagrams
+- Relational database schemas -> Organization + relationships
+- use SQL to setup/creation this DB
+
+2. Database admin
+- Maintenance of DBs
+
+3. Database users
+- Manipulate data in a DB
+
+**************************************************
+2. How to be a DB Designer?
+**************************************************
+-> Create E-R diagrams
+Columns of Tables: dateOfPurchase, customerID, etc.
+
+1. Primary Key /Unique Key/ Cannot be Null key:
+- What makes a row/record in the table unique?
+Eg.	Column_1 (Just one column)
+	Column_1 + Column_4 (Combination of two columns)
+
+
+-> Organize the tables I.e. draw relational schema
+Primary key is underlined
+ 
+	NameOfTable
+      ----------------------------
+      | purchase_number + entryID |
+      | ------------------------- |
+      | dateOfPurchase            |
+      | itemCode                  |
+      ----------------------------
+
+2. Foreign Key
+- What Column in my table coincides with the other table?
+- Can be Null, does not have to be unique, can have multiple FKs
+- If unique, then its primary key for it's own table
+
+ 
+	NameOfTable
+      ----------------------------
+      | purchase_number + entryID |			Customers	
+      | ------------------------- |			----------------------------
+      | dateOfPurchase    (FK)    | ---------------->   | dateOfPurchase	   |	
+      | itemCode                  |			|--------------------------|
+      ----------------------------                      |column_1 		   |
+							|column_2 		   |
+							---------------------------- 
+
+3. Constraints
+
+a. UNIQUE
+- Ensures that all values in a column are different.. Just to specify a field or field 1 + field 2 should have Unique values.
+- How is this different from Primary Key than? -> UNIQIE columns can afford to be NULL
+
+b. NOT NULL: Ensures that a column cannot have NULL value.
+
+c. DEFAULT <parameter>: Provides a default value for a column when none is specified.
+
+d. CHECK Constraint: Makes sure that all values in a column satisfy certain criteria.
+
+-> Draw relationships:
+
+e. Cardinality Constraints:
+
+- One to many     | <-
+- One to One	  | |
+- Many to Many
+- Many to one
+
+4. Data types
+**************************************************
+1. String
+**************************************************
+
+1. CHAR [n]
+--------------------------
+- Fixed
+Eg. CHAR [6]
+We can input to this entry "Nikita" but not "Nitya"
+(50% faster than VARCHAR
+
+2. VARCHAR [n])
+--------------------------
+- Flexible till max n
+Eg. VARCHAR [6]
+We can input "Nikita" or "Nitya"
+Used for passwords with a max length and min variable
+
+3. ENUM ('x', 'y')
+--------------------------
+- Fixed set of options
+Eg. ENUM ('M', 'F')
+
+
+**************************************************
+2.Numeric
+**************************************************
+int data types
+TINYINT
+SMALLINT
+MEDIUMINT
+INT
+BIGINT
+
+fixed data types
+DECIMAL (Precision) OR DECIMAL(Precision, Scale)
+NUMERIC
+
+
+FLOAT
+DOUBLE
+
+
+**************************************************
+3. OTHER
+**************************************************
+
+DATE
+DATETIME
+TIMESTAMP
+BLOB
+
+NULL -> Empty or missing value
+0 or NONE -> Has a value but it is empty
