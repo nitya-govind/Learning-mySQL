@@ -56,7 +56,7 @@ Primary key is underlined
 
 a. UNIQUE
 - Ensures that all values in a column are different.. Just to specify a field or field 1 + field 2 should have Unique values.
-- How is this different from Primary Key than? -> UNIQIE columns can afford to be NULL
+- How is this different from Primary Key than? -> UNIQUE columns can afford to be NULL
 
 b. NOT NULL: Ensures that a column cannot have NULL value.
 
@@ -83,7 +83,7 @@ e. Cardinality Constraints:
 - Fixed
 Eg. CHAR [6]
 We can input to this entry "Nikita" but not "Nitya"
-(50% faster than VARCHAR
+(50% faster than VARCHAR)
 
 2. VARCHAR [n])
 --------------------------
