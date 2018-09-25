@@ -92,11 +92,11 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 
 2. Destroy a Table
 ------------------------------------------------
-2.a.	mysql>	DROP TABLE Sales
+2.a.	mysql>	DROP TABLE Sales;
 
 3. Delete contents of a Table but still have the table exist
 ------------------------------------------------
-3.a.	mysql>	TRUNCATE TABLE Sales
+3.a.	mysql>	TRUNCATE TABLE Sales;
 
 4. Rename a Table
 ------------------------------------------------
@@ -105,7 +105,7 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 5.	Add a Column to the Table:
 5.a.	mysql>	ALTER TABLE Sales
 	mysql>	ADD COLUMN dateOFPurchase DATE;
-5.b.	mysql>	ALTER TABLE Sales
+5.b.	mysql>	ALTER TABLE Sales;
 	mysql>	ADD COLUMN (customerRepOfPurchase INT, genderOfPurchaser CHAR[1]);
 
 6. 	Remove a Column from the table:
@@ -138,14 +138,13 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 		SET gender = 'F' 
 		WHERE customerRepOfPurchase = 5;
 
-3.b.	mysql>	INSERT INTO sales VALUES (5,M)
-
 4. Destroy data in an existing column
 ------------------------------------------------
 4.a.	mysql>	DELETE FROM Sales; // Same as TRUNCATE TABLE Sales
 4.b. 	mysql>	DELETE FROM Sales
 		WHERE customerRepOfPurchase = 5;
 
+*** DROP (destroy table or destroy column) vs TRUNCATE(clear table) vs DELETE(clear column)
 
 **************************************************
 3. Data Control Language (DCL) ----------> Not too often used, mostly by DB admins
@@ -155,9 +154,9 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 ------------------------------------------------
 1.a.	mysql>	CREATE USER 'Nikita'@'CompanyHostName' IDENTIFIED BY 'mypasswordis123';
 	mysql>	GRANT SELECT ON Sales.Customers
-		TO 'Nikita'@'CompanyHostName'; // Can't use any other command other than SELECT
+		TO 'Nikita'@'CompanyHostName'; // Now Nikita can't use any other command other than SELECT
 	mysql>	GRANT ALL ON Sales.*
-		TO 'Usha'@'CompanyHostName' // Can use all commands
+		TO 'Usha'@'CompanyHostName' // Now Usha can use all commands
 
 - Who owns these rights? - Database Admins
 			They decide who should be given how much power
@@ -170,7 +169,7 @@ Foreign Key Constraint: Used to ensure referential integrity of the data.
 2.a. Say the 10 yr seasoned employee makes mistakes again and again, so you want to bring down his permissions
 To an intern level 
 	mysql>	REVOKE TRUNCATE ON Sales.Customers
-		FROM 'Nikita'@'CompanyHostName'; // Can't use TRUNCATE
+		FROM 'Nikita'@'CompanyHostName'; // Now Nikita can't use TRUNCATE
 
 
 **************************************************
